@@ -1,9 +1,8 @@
 <% @messages.each do |message| %>
   <div class="message:">
     <h2><a href="/messages/<%= message.id %>"><%=message.author %></a></h2>
-    <p>
-      <%= message.content %>
-    </p>
+    <p><%= message.content %></p>
+    <p><a href="<%= message.link %>"><%= message.link %></a></p>
   </div>
 <% end %>
 
