@@ -14,9 +14,11 @@
 ActiveRecord::Schema.define(version: 20160515033948) do
 
   create_table "messages", force: :cascade do |t|
-    t.string "author"
-    t.string "content"
-    t.string "link"
+    t.string   "author"
+    t.string   "content"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

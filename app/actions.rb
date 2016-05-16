@@ -12,6 +12,11 @@ get '/messages/new' do
   erb :'messages/new'
 end
 
+get '/messages/:author' do
+  @messageauthor = Message.where("author = ?", params[:author])
+  erb :'messages/show_message'
+end
+
 post '/messages' do
   @message = Message.new(
     #title: params[:title],
@@ -26,7 +31,10 @@ post '/messages' do
   end
 end
 
-get '/messages/:id' do
+get '/messages/:author/:id' do
   @message = Message.find params[:id]
   erb :'messages/show'
 end
+
+
+

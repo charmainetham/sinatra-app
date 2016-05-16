@@ -1,10 +1,9 @@
-<% @messages.each do |message| %>
+<% @messageauthor.each do |message| %>
   <div class="message:">
     <h2><a href="/messages/<%=message.author %>/<%= message.id %>"><%=message.author %></a></h2>
     <p><%= message.content %></p>
     <p>Created at: <%= message.created_at %></p>
     <p><a href="<%= message.link %>"><%= message.link %></a></p>
-    <p> More from <%= message.author %><a href="/messages/<%=message.author %>"> HERE</a></p>
   </div>
 <% end %>
 

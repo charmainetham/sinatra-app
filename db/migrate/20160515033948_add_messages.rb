@@ -4,6 +4,8 @@ class AddMessages < ActiveRecord::Migration
       t.string :author
       t.string :content
       t.string :link
+
+      t.timestamps
     end
   end
 end
